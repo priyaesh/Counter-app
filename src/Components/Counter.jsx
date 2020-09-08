@@ -5,8 +5,7 @@ class Counter extends Component {
     count: 5,
   };
   render() {
-    let classes = "badge m-2 badge-";
-    classes += this.state.count === 0 ? "primary" : "warning";
+    let classes = this.getBadgeClasses();
 
     return (
       <>
@@ -15,6 +14,12 @@ class Counter extends Component {
       </>
     );
   }
+  getBadgeClasses() {
+    let classes = "badge m-2 badge-";
+    classes += this.state.count === 0 ? "primary" : "warning";
+    return classes;
+  }
+
   formatCount() {
     const { count } = this.state;
     return count === 0 ? "zero" : count;
