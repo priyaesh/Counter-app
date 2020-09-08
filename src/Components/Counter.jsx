@@ -5,9 +5,9 @@ class Counter extends Component {
     count: 5,
   };
 
-  handleOnClick = () => {
+  handleOnClick = (value) => {
     console.log("Button Clicked");
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ count: this.state.count + value });
   };
   render() {
     let classes = this.getBadgeClasses();
@@ -16,7 +16,7 @@ class Counter extends Component {
       <>
         <span className={classes}>{this.formatCount()}</span>
         <button
-          onClick={this.handleOnClick}
+          onClick={() => this.handleOnClick(5)}
           className="btn btn-secondary btn-sm"
         >
           Increment
