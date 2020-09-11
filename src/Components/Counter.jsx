@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 5,
+    count: 0,
   };
 
   handleOnClick = (value) => {
@@ -13,7 +13,7 @@ class Counter extends Component {
     let classes = this.getBadgeClasses();
 
     return (
-      <>
+      <div>
         <span className={classes}>{this.formatCount()}</span>
         <button
           onClick={() => this.handleOnClick(5)}
@@ -21,7 +21,7 @@ class Counter extends Component {
         >
           Increment
         </button>
-      </>
+      </div>
     );
   }
   getBadgeClasses() {
