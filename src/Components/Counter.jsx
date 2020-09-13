@@ -22,7 +22,9 @@ class Counter extends Component {
         >
           Increment
         </button>
-        <button className="btn btn-danger btn-sm">Delete</button>
+        <button onClick={this.props.onDelete} className="btn btn-danger btn-sm">
+          Delete
+        </button>
       </div>
     );
   }
