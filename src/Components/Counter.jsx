@@ -10,7 +10,6 @@ class Counter extends Component {
     this.setState({ value: this.state.value + value });
   };
   render() {
-    console.log("props", this.props);
     let classes = this.getBadgeClasses();
 
     return (
@@ -23,6 +22,7 @@ class Counter extends Component {
         >
           Increment
         </button>
+        <button className="btn btn-danger btn-sm">Delete</button>
       </div>
     );
   }

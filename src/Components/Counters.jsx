@@ -10,6 +10,7 @@ class Counters extends Component {
       { id: 4, value: 1 },
     ],
   };
+
   render() {
     return (
       <div>
